@@ -1,0 +1,8 @@
+constraint_id,level,field_or_group,rule,reason
+SP-001,hard,sample_id,No identical sample_id may appear in more than one split.,Prevents direct flow duplication leakage.
+SP-002,hard,source_file,No identical source_file may appear in more than one split.,Prevents exact file reuse across train/val/test.
+SP-003,hard,"text_sha1,first_packet_sha1",Exact duplicated TrafficFormer text or first packet must be assigned to one split only or removed.,Prevents exact and near-exact input leakage.
+SP-004,hard,flow_key_bidir,Bidirectional five-tuple groups should not cross train/val/test.,Reduces IP/port shortcut leakage.
+SP-005,preferred_hard_for_final,pcap_session,"When raw data provide enough sessions, pcap/session groups should be split-disjoint.",Network traffic often leaks session/capture-specific shortcuts.
+SP-006,hard,class_balance,Keep fixed class list and deterministic target counts per class whenever feasible.,Keeps static classification and later class-incremental tasks comparable.
+SP-007,protocol,dataset_role,Use MAPP for discovery and NUDT for external validation only.,Avoids tuning representation explanations to both datasets at once.

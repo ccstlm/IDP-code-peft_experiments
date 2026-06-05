@@ -1,0 +1,42 @@
+{
+  "stage": "stage1_data_input_protocol",
+  "version": "v0.2",
+  "created_at": "2026-06-05",
+  "dataset_roles": {
+    "MAPP": "discovery and method tuning",
+    "NUDT": "external validation only"
+  },
+  "effective_flow_rule": {
+    "packet_types": "IPv4 TCP or UDP",
+    "excluded_packets": [
+      "TCP SYN handshake",
+      "empty payload",
+      "non-IP"
+    ],
+    "minimum_effective_packet_count": 17
+  },
+  "trafficformer_input_rule": {
+    "packet_scope": "first 8 effective packets",
+    "byte_scope": "first 64 IP-layer bytes after Ethernet/VLAN removal",
+    "separator": "[SEP]",
+    "max_tokens": 512,
+    "tokenization_note": "Legacy artifacts contain both byte-level and overlapping hex-window tokenizations; the audit script detects both for metadata extraction."
+  },
+  "current_mutation_protocol": {
+    "primary": "mask_in_place sweep over all 4-byte blocks 0-3 through 60-63",
+    "control": "physical_delete sweep over all 4-byte blocks, interpreted only as perturbation/layout sensitivity",
+    "not_primary": "legacy fixed-block physical delete results are historical context, not the current main hypothesis"
+  },
+  "class_incremental_protocol": {
+    "num_classes": 50,
+    "num_tasks": 5,
+    "classes_per_task": 10,
+    "task_order": "fixed label-id order"
+  },
+  "outputs": {
+    "flow_shortcut_manifest": "experiments/stage1_data_input_protocol/outputs/flow_shortcut_manifest_baseline_v0_2.csv",
+    "leakage_summary": "experiments/stage1_data_input_protocol/outputs/stage1_leakage_summary.csv",
+    "observed_offset_semantics": "experiments/stage1_data_input_protocol/outputs/stage1_offset_semantic_observed.csv",
+    "strict_split_feasibility": "experiments/stage1_data_input_protocol/outputs/stage1_strict_split_feasibility.csv"
+  }
+}

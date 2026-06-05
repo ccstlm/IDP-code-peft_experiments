@@ -1,0 +1,17 @@
+byte_start,byte_end_exclusive,block_label,tcp_static_semantics,udp_static_semantics,note
+0,4,0-3,"IPv4 version/IHL, DSCP/ECN, total length",same,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+4,8,4-7,"IPv4 identification, flags, fragment offset",same,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+8,12,8-11,"IPv4 TTL, protocol, header checksum",same,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+12,16,12-15,IPv4 source address,same,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+16,20,16-19,IPv4 destination address,same,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+20,24,20-23,TCP source/destination ports,UDP source/destination ports,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+24,28,24-27,TCP sequence number,UDP length/checksum,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+28,32,28-31,TCP acknowledgement number,UDP payload start,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+32,36,32-35,TCP data offset/flags/window,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+36,40,36-39,TCP checksum/urgent pointer,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+40,44,40-43,TCP options or payload depending on TCP data offset,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+44,48,44-47,TCP options or payload depending on TCP data offset,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+48,52,48-51,TCP payload for common 20-byte TCP header flows; may include TLS/HTTP/QUIC bytes,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+52,56,52-55,payload for most flows,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+56,60,56-59,payload for most flows,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.
+60,64,60-63,payload for most flows,UDP payload,Offsets are IP-layer offsets after Ethernet/VLAN removal.

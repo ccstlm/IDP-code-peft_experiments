@@ -1,0 +1,7 @@
+dataset,role,variant,split,relative_path,rows,class_count,label_count,min_per_class,max_per_class,seq_min,seq_max
+mapp,discovery,baseline,train,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/mapp/baseline/train.tsv,35000,50,50,700,700,66,512
+mapp,discovery,baseline,val,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/mapp/baseline/val.tsv,5000,50,50,100,100,66,512
+mapp,discovery,baseline,test,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/mapp/baseline/test.tsv,10000,50,50,200,200,66,512
+nudt,external_validation,baseline,train,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/nudt/baseline/train.tsv,35000,50,50,700,700,510,510
+nudt,external_validation,baseline,val,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/nudt/baseline/val.tsv,5000,50,50,100,100,510,510
+nudt,external_validation,baseline,test,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/nudt/baseline/test.tsv,10000,50,50,200,200,510,510

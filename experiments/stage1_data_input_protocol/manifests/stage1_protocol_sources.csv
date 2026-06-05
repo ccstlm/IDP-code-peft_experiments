@@ -1,0 +1,7 @@
+source_id,relative_path,exists,purpose
+stage1_builder,LEGACY/build_foundation_stage1_tsv.py,True,Prior raw pcap to TrafficFormer TSV builder
+effective_packet_audit,LEGACY/effective_packet_audit/mapp_nudt_effective_packet_gt16_summary.json,True,Effective packet count audit
+foundation_stage1_summary,LEGACY/foundation_stage1_tsv/foundation_stage1_tsv/foundation_stage1_tsv_summary.json,True,Prior Stage-1 foundation TSV summary
+downstream_validation,LEGACY/h100_downstream_50class_ablation_package_20260604/data/downstream_50class_ablation/validation_summary.json,True,Formal 50-class split validation
+byte_block_generator,LEGACY/foundation_space_experiment/run_packet_byte_block_tsv_multiprocess.py,True,Legacy byte-block mutation generator
+position_aware_report,LEGACY/foundation_token_ablation_tsvs/foundation_token_ablation_tsvs/reports/position_aware_ablation_report.md,True,Legacy semantic token ablation report
