@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Packaging and tooling
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Data, checkpoints, and generated outputs
+data/*
+!data/.gitkeep
+outputs/*
+!outputs/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.npy
+*.npz
+*.pkl
+*.pcap
+*.pcapng
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp

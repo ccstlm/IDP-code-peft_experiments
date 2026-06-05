@@ -1,0 +1,12 @@
+[project]
+name = "peft-experiments"
+version = "0.1.0"
+description = "New PEFT and traffic representation experiments."
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
